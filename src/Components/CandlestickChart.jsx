@@ -126,7 +126,7 @@ const CandlestickChart = ({ coinId = 'bitcoin', days = 30 }) => {
         width: '100%', 
         height: '500px',
         backgroundColor: '#1C2127',
-        borderRadius: '8px',
+      
         overflow: 'hidden'
       }}
     />

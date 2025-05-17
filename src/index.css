@@ -321,6 +321,31 @@ body {
     color: var(--Secondary-Black-Tint-3)
 }
 
+.chart-tab {
+    padding: 15px 5px;
+    border: 1px solid var(--Card-Stroke);
+    border-radius: 14px 14px 0px 0px;
+    background-color: var(--Card-BG);
+}
+
+.chart-tab .list {
+    display: flex;
+    padding: 7px;
+    list-style: none;
+    gap: 20px;
+    color: var(--Secondary-Black-Tint-3);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.chart-tab .list .active {
+    background-color: #555C63;
+    /* height: 32px; */
+    padding: 5px 10px;
+    color: var(--Primary-Angel-White);
+    border-radius: 100px;
+}
+
 .main_display {
     display: flex;
     justify-content: center;

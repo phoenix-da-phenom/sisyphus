@@ -4,6 +4,7 @@ import OrderBook from '../Components/OrderBook'
 import BuyBTC from '../Components/BuyBTC'
 import Navbar from '../Components/Navbar'
 import TopInfo from '../Components/TopInfo'
+import ChartTimerTab from '../Components/ChartTimerTab'
 
 function App() {
    // Sample candlestick data (time, open, high, low, close)
@@ -19,6 +20,7 @@ function App() {
     <TopInfo/>
     <div className="main-area">
       <div   className='candleStick__container'>
+        <ChartTimerTab/>
 
        <CandlestickChart data={sampleData} />
       </div>
