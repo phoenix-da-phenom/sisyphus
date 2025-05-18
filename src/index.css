@@ -158,6 +158,10 @@ body {
     display: flex;
 }
 
+.top-info-container {
+    padding: 0px 5px
+}
+
 .top-info {
     background-color: var(--Card-BG);
     width: 100%;
@@ -198,6 +202,7 @@ body {
 
 .candleStick__container {
     width: 100%;
+    padding: 0 5px;
 }
 
 .coin-container__img {
@@ -346,6 +351,114 @@ body {
     border-radius: 100px;
 }
 
+.buy-sell-tab__container {
+    display: flex;
+    font-size: 12px;
+    color: var(--Primary-Angel-White);
+    background-color: #00000029;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.buy-sell-tab__container div {
+    padding: 5px;
+    padding: 10px;
+    width: 112.5px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options {
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.options .active {
+    color: var(--Primary-Angel-White);
+    background-color: var(--Card-BG);
+    padding: 10px;
+    border-radius: 100px;
+    width: 60px;
+    text-align: center;
+}
+
+.options div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--Secondary-Black-Tint-3);
+    padding: 0px 10px;
+}
+
+.buy-sell-tab .active {
+    border: 1px solid var(--Chart-Green);
+    border-radius: 8px;
+    background-color: var(--Card-BG);
+}
+
+
+/* .text-box {
+    padding: 10px;
+    border: 1px solid var(--Card-Stroke);
+    background-color: transparent;
+    border-radius: 8px;
+    color: var(--Secondary-Black-Tint-3);
+    position: relative;
+}
+
+.text-box::before {
+    content: "Limit Price        USD000";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--Secondary-Black-Tint-3);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.text-box:focus::before,
+.text-box:not(:placeholder-shown)::before {
+    display: none;
+} */
+
+.text-box__container {
+    padding: 10px;
+    border: 1px solid var(--Card-Stroke);
+    background-color: transparent;
+    border-radius: 8px;
+    color: var(--Secondary-Black-Tint-3);
+    position: relative;
+    font-size: 14px;
+}
+
+.text-box {
+    background-color: transparent;
+    border: 0px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 4px;
+    color: var(--Secondary-Black-Tint-3)
+}
+
+#txt {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    right: 10px;
+    pointer-events: none;
+    /* Allows clicks to pass through to the input */
+    z-index: 1;
+}
+
 .main_display {
     display: flex;
     justify-content: center;
@@ -416,7 +529,6 @@ body {
     .order-book__container {
         width: 100%;
         margin-top: 10px;
-        margin: 10px 0;
     }
     .order-book-container {
         width: 100%;
