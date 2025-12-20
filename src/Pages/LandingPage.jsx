@@ -4,14 +4,11 @@ import BuyBTC from "../Components/BuyBTC";
 import Navbar from "../Components/Navbar";
 import TopInfo from "../Components/TopInfo";
 import ChartTimerTab from "../Components/ChartTimerTab";
+import { useState } from "react";
 
 function App() {
-  // Sample candlestick data (time, open, high, low, close)
-  const sampleData = [
-    { time: "2023-01-01", open: 100, high: 110, low: 95, close: 105 },
-    { time: "2023-01-02", open: 105, high: 115, low: 100, close: 110 },
-    // Add more data points...
-  ];
+  const [days, setDays] = useState(30);
+ 
 
   return (
     <>
@@ -22,9 +19,9 @@ function App() {
 
       <div className="main-area">
         <div className="candleStick__container">
-          <ChartTimerTab />
+          <ChartTimerTab setDays={setDays} />
 
-          <CandlestickChart data={sampleData} />
+          <CandlestickChart days={days} coinId={"bitcoin"}   />
         </div>
         <div className="order-book-container">
           <OrderBook />

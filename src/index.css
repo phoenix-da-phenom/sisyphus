@@ -79,7 +79,6 @@ body {
 
 .top_right-corner {
     position: relative;
-    /* border: 5px solid red; */
     height: 50px;
     width: 240px
 }
@@ -126,16 +125,6 @@ body {
     text-overflow: ellipsis;
     transition: max-width 0.35s ease;
 }
-
-
-/* 👇 Hover magic */
-
-
-/* .profile__content:hover {
-    cursor: pointer;
-    color: var(--Primary-Angel-White);
-    min-width: auto;
-} */
 
 .profile__icons {
     font-size: var(--size-lg);
@@ -241,6 +230,11 @@ body {
     font-size: var(--size-md)
 }
 
+.navbar-list li:hover {
+    color: var(--Primary-Angel-White);
+    cursor: pointer;
+}
+
 .navbar-list .active {
     color: var(--Primary-Angel-White)
 }
@@ -304,15 +298,15 @@ body {
 }
 
 .coin-container__img {
-    height: 32px;
+    height: var(--size-xl)
 }
 
 .coin-container__txt {
-    font-size: 24px;
+    font-size: var(--size-lg)
 }
 
 .coin-container__icon {
-    font-size: 30px;
+    font-size: var(--size-xl)
 }
 
 .data-container {
@@ -320,7 +314,7 @@ body {
     border-left: 1px solid var(--Card-Stroke);
     width: 180px;
     padding: 20px;
-    font-size: 15px;
+    font-size: var(--size-md);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -437,7 +431,11 @@ body {
     gap: 20px;
     color: var(--Secondary-Black-Tint-3);
     cursor: pointer;
-    font-size: 15px;
+    font-size: var(--size-md)
+}
+
+.chart-tab .list li:hover {
+    color: var(--Primary-Angel-White);
 }
 
 .chart-tab .list .active {
