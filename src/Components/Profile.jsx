@@ -3,6 +3,7 @@ import Defaultimage from "../assets/Defaultprofile.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { PiGlobe } from "react-icons/pi";
 import { BiLogOut } from "react-icons/bi";
+
 export default function Profile() {
   return (
     <div className="top_right-corner">
