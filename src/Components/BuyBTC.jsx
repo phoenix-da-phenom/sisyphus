@@ -6,7 +6,7 @@ import HorizontalRule from "./HorizontalRule";
 
 export default function BuyBTC() {
   return (
-    <div className="order-book__container">
+    <div className="buy-btc__container">
       <BuySellTab />
       <div className="options">
         <div>

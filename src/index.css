@@ -84,6 +84,18 @@ body {
     width: 100%;
 }
 
+
+/* Default: Desktop */
+
+.desktop-view {
+    display: flex;
+    gap: 16px;
+}
+
+.mobile-view {
+    display: none;
+}
+
 .profile {
     width: 500px;
     /* collapsed width */
@@ -335,13 +347,35 @@ body {
     border-radius: 8px;
 }
 
+.buy-btc__container {
+    border: 1px solid var(--Card-Stroke);
+    padding: 7px;
+    margin: 0 10px;
+    width: 300px;
+    border-radius: 8px;
+}
+
 .order-tab {
     background-color: #00000029;
     padding: 1px;
     border-radius: 10px;
 }
 
+.mobile-order-tab {
+    background-color: #00000029;
+    padding: 1px;
+    border-radius: 10px;
+    display: none;
+}
+
 .order-tab__container {
+    display: flex;
+    font-size: 12px;
+    color: var(--Primary-Angel-White);
+    width: 100%;
+}
+
+.mobile-order-tab__container {
     display: flex;
     font-size: 12px;
     color: var(--Primary-Angel-White);
@@ -356,9 +390,27 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+.mobile-order-tab__container div {
+    padding: 10px;
+    width: 112.5px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .order-tab .active {
+    border: 1px solid var(--Card-Stroke);
+    border-radius: 8px;
+    background-color: #21262C;
+}
+
+.mobile-order-tab .active {
     border: 1px solid var(--Card-Stroke);
     border-radius: 8px;
     background-color: #21262C;
@@ -460,6 +512,7 @@ body {
     background-color: #00000029;
     border-radius: 8px;
     padding: 3px;
+    width: 100%;
 }
 
 .buy-sell-tab__container div {
@@ -494,7 +547,7 @@ body {
     align-items: center;
     justify-content: space-between;
     color: var(--Secondary-Black-Tint-3);
-    padding: 0px 10px;
+    padding: 0px 2px;
 }
 
 .buy-sell-tab .active {
@@ -601,11 +654,20 @@ body {
     .navbar__logo {
         border: 0;
     }
+    .desktop-view {
+        display: none;
+    }
+    .mobile-view {
+        display: block;
+    }
     .profile {
         width: 100%;
     }
     .profile__content-name {
         max-width: 1px;
+    }
+    .top-info-container {
+        padding: 0px
     }
     .top-info {
         border-radius: 0;
@@ -665,18 +727,35 @@ body {
         width: 100%;
     }
     .candleStick__container {
-        display: none;
+        overflow: hidden;
     }
     .order-tab__container div {
-        width: 200px;
+        width: 100%;
+        white-space: nowrap;
     }
-    .buy-btc-container {
-        display: none;
+    .buy-btc__container {
+        width: 100%;
+        margin: 0;
     }
     #tab1 {
         display: block;
     }
     .order-book__container {
         width: 100%;
+    }
+    .order-tab {
+        margin-top: 5px;
+        display: none;
+    }
+    .main-area {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .buy-sell-tab__container div {
+        width: 100%;
+    }
+    .mobile-order-tab {
+        margin-top: 5px;
+        display: block;
     }
 }
