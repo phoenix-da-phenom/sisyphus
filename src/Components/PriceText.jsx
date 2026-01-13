@@ -1,33 +1,30 @@
-import React from 'react'
+import React from "react";
 
-export default function PriceText({ top, color, overlayPercentage = 0 }) {
+export default function PriceText({
+  top = 0,
+  color = "#22c55e",
+  overlayPercentage = 0,
+}) {
   return (
-    <div className='price-text' style={{ 
-      display: 'flex', 
-      position: 'relative',
-      overflow: 'hidden',
-      marginTop: top
-    }}>
-      <div style={{
-        position: 'absolute',
-        right: 0,
-        top: 0,
-        height: '100%',
-        width: `${overlayPercentage}%`,
-        backgroundColor: color,
-        opacity: 0.2,
-        zIndex: 1
-      }}></div>
+    <div
+      className="price-row"
+      style={{
+        marginTop: top,
+      }}
+    >
+      {/* Overlay */}
+      <div
+        className="price-row__overlay"
+        style={{
+          width: `${overlayPercentage}%`,
+          backgroundColor: color,
+        }}
+      />
 
-      <div className='txt-color' style={{ padding: '8px 0', flex: 1, textAlign: 'center' }}>
-        36,920.12
-      </div>
-      <div style={{ padding: '8px 0', flex: 1, textAlign: 'center' }}>
-        0.758965
-      </div>
-      <div style={{ padding: '8px 0', flex: 1, textAlign: 'center' }}>
-        28,020.98
-      </div>
+      {/* Content */}
+      <div className="price-row__cell price">36,920.12</div>
+      <div className="price-row__cell">0.758965</div>
+      <div className="price-row__cell">28,020.98</div>
     </div>
   );
 }

@@ -9,12 +9,8 @@ export default function PricePairSheet() {
   return (
     <div>
       <div className="price-pair" style={{ position: "relative" }}>
-       <div className=" heading">
-        <p>Price<br/> <span style={{ fontSize:'9px' }}>USDT</span></p>
-         <p>Amount<br/><span style={{ fontSize:'9px', float:'right'}}> BTC</span></p>
-          <p>Total</p>
-       </div>
-        <div>
+ 
+        {/* <div>
           <PriceText overlayPercentage={50} top="8px" color={"#FF6838"} />
           <PriceText overlayPercentage={1} top="8px" color={"#FF6838"} />
           <PriceText overlayPercentage={30} top="8px" color={"#FF6838"} />
@@ -40,7 +36,43 @@ export default function PricePairSheet() {
         <PriceText overlayPercentage={30} top="10px" color={"#00C076"} />
         <PriceText overlayPercentage={90} top="10px" color={"#00C076"} />
         <PriceText overlayPercentage={50} top="10px" color={"#00C076"} />
-        <PriceText overlayPercentage={30} top="10px" color={"#00C076"} />
+        <PriceText overlayPercentage={30} top="10px" color={"#00C076"} /> */}
+
+          <div className="order-table-wrapper">
+  <table className="order-table">
+    <thead>
+      <tr>
+        <th style={{ textAlign:'left' }}>
+          Price
+          <span>USDT</span>
+        </th>
+        <th>
+          Amount
+          <span>BTC</span>
+        </th>
+        <th>Total</th>
+      </tr>
+    </thead>
+
+    <tbody>
+     
+
+    </tbody>
+   
+  </table>
+   <PriceText overlayPercentage={30} top="10px" color={"#00C076"} />
+    <PriceText overlayPercentage={50} top="8px" color={"#FF6838"} />
+          <PriceText overlayPercentage={1} top="8px" color={"#FF6838"} />
+          <PriceText overlayPercentage={30} top="8px" color={"#FF6838"} />
+          <PriceText overlayPercentage={90} top="8px" color={"#FF6838"} />
+          <PriceText overlayPercentage={50} top="8px" color={"#FF6838"} />
+      <PriceText overlayPercentage={30} top="10px" color={"#00C076"} />
+
+</div>
+
+
+
+
       </div>
     </div>
   );

@@ -424,6 +424,7 @@ body {
     display: flex;
     gap: 15px;
     padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 5px;
     align-items: center;
 }
@@ -474,6 +475,51 @@ body {
     padding: 0px 10px;
     margin-top: 10px;
     color: var(--Secondary-Black-Tint-3)
+}
+
+.price-row {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+
+/* Overlay = heat bar */
+
+.price-row__overlay {
+    position: absolute;
+    right: 0;
+    /* 🔥 start from right */
+    top: 0;
+    height: 100%;
+    opacity: 0.18;
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+
+/* Cells */
+
+.price-row__cell {
+    flex: 1;
+    padding: 8px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    /* text stays on top */
+    font-size: 13px;
+    color: #e5e7eb;
+}
+
+.price-row__cell.price {
+    color: #22c55e;
+}
+
+.table_heading {
+    color: var(--Primary-Angel-White);
+    font-weight: 600;
 }
 
 .chart-tab {
@@ -644,6 +690,82 @@ body {
     width: 100%;
 }
 
+.order-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: separate;
+    font-size: 13px;
+    color: var(--Primary-Angel-White);
+}
+
+.order-table thead {
+    position: sticky;
+    top: 0;
+    /* background: #0f172a; */
+    z-index: 1;
+}
+
+.order-table th {
+    text-align: center;
+    padding: 10px 8px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--Primary-Angel-White);
+    white-space: nowrap;
+}
+
+.order-table th:nth-child(3) {
+    text-align: right;
+}
+
+.order-table th span {
+    display: block;
+    font-size: 10px;
+    color: #6b7280;
+}
+
+.order-table td {
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.order-table td:nth-child(1) {
+    text-align: left;
+}
+
+.order-table td:nth-child(3) {
+    text-align: right;
+}
+
+.order-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.order-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* Price colors */
+
+.price.buy {
+    color: #22c55e;
+}
+
+.price.sell {
+    color: #ef4444;
+}
+
+.amount,
+.total {
+    text-align: right;
+}
+
 
 /* ************* MEDIA QUERY********************************* */
 
@@ -757,5 +879,15 @@ body {
     .mobile-order-tab {
         margin-top: 5px;
         display: block;
+    }
+    .order-table {
+        font-size: 12px;
+    }
+    .order-table th,
+    .order-table td {
+        padding: 6px;
+    }
+    .order-table th span {
+        font-size: 9px;
     }
 }
