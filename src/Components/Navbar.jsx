@@ -20,9 +20,9 @@ export default function Navbar() {
                 <li>Wallets</li>
                 <li>Roqqu Hub</li>
 
-                <li>
+                {/* <li>
                   <Link to="/auth">Authentication</Link>{" "}
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
