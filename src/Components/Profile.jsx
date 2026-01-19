@@ -3,6 +3,7 @@ import Defaultimage from "../assets/Defaultprofile.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { PiGlobe } from "react-icons/pi";
 import { BiLogOut } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   return (
@@ -19,8 +20,9 @@ export default function Profile() {
         <span>
           <PiGlobe />
         </span>
-        <span>
-          <BiLogOut />
+        <span>  
+           <a href="/auth"> <BiLogOut /></a>{" "}
+         
         </span>
       </div>
     </div>

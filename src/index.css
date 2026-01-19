@@ -150,6 +150,11 @@ body {
     color: var(--Primary-Angel-White);
 }
 
+.profile__icons span a:hover {
+    cursor: pointer;
+    color: var(--Primary-Angel-White);
+}
+
 @keyframes expandProfile {
     0% {
         width: 240px;
