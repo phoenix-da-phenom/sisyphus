@@ -64,7 +64,8 @@ const AuthScreen = () => {
   };
 
   return (
-    <div className="auth-screen">
+    <>
+    {/* <div className="auth-screen">
       <h1>Auth Screen</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -99,7 +100,23 @@ const AuthScreen = () => {
           </ul>
         </div>
       )}
-    </div>
+    </div> */}
+
+    <h4>
+      Sign into your account
+    </h4>
+
+    <form>
+      <input />
+      <input />
+      <button type="submit">login</button>
+
+
+
+    </form>
+
+
+    </>
   );
 };
 
